@@ -19,8 +19,16 @@ def load_library(file)
 hash
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file, emoticon)
+
+  dictionary = load_library(file)
+
+  if dictionary["get_emoticon"].keys.include?(emoticon)
+    dictionary["get_emoticon"][emoticon]
+  else
+    "Sorry, that emoticon was not found"
+  end
+  
 end
 
 def get_english_meaning

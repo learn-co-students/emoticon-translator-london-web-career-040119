@@ -1,6 +1,5 @@
 require 'pry'
 require 'yaml'
-# require modules here
 
 def load_library(file)
 
@@ -10,7 +9,6 @@ def load_library(file)
     "get_emoticon" =>{},
     "get_meaning" => {}
   }
-
 
   dictionary.each do |word, emoticons|
     hash["get_emoticon"][emoticons[0]] = emoticons[1]
@@ -28,7 +26,6 @@ def get_japanese_emoticon(file, emoticon)
   else
     "Sorry, that emoticon was not found"
   end
-
 end
 
 def get_english_meaning(path, emoticon)
@@ -39,5 +36,4 @@ def get_english_meaning(path, emoticon)
   else
     "Sorry, that emoticon was not found"
   end
-
 end
